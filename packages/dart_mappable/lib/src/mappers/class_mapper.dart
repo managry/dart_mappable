@@ -140,7 +140,7 @@ abstract class ClassMapperBase<T extends Object>
   /// This excludes constructor parameters that are not assigned to a field.
   /// See [FieldMode] for more.
   late final List<Field<T, dynamic>> _members =
-      fields.values.where((f) => f.mode != FieldMode.param).toList();
+      fields.values.where((f) => f.mode == FieldMode.field).toList();
 
   /// The set of constructor parameters of this class.
   ///
